@@ -1,0 +1,102 @@
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+<!--
+	ZeroFour by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>Add Cafe</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rum+Raisin&display=swap" rel="stylesheet">
+    <link rel='icon' href='static/images/favicon.ico' type='image/x-icon' sizes="32x32"/>
+    <style>
+    body {
+        font-family: 'Rum Raisin', cursive;
+        font-weight: 400;
+        font-size: 14pt;
+        line-height: 2em;
+        margin: 5%;
+        color: #404248;
+        background-image: url("images/bg03.png");
+        }
+
+    h2 {
+        font-size: 2em;
+        }
+
+    hr {
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        padding: 3px;
+        }
+
+    .container {
+        width: 65%;
+        }
+
+    .major {
+        padding-bottom: 1%;
+        }
+
+    #submit {
+        background-color: #3B3E45;
+        width: 10%;
+        margin-top: 2%;
+        }
+
+    #submit:hover {
+        color: #3B3E45 !important;
+		background-color: #ffffff;
+		}
+
+</style>
+</head>
+<body class="no-sidebar is-preload">
+<div id="page-wrapper">
+
+
+    <!-- Main Wrapper -->
+    <div id="main-wrapper">
+        <div class="wrapper style2">
+            <div class="inner">
+                <div class="container">
+                    <div id="content">
+
+                        <!-- Content -->
+
+                        <article>
+                            <header class="major">
+                                <h2>Add new cafe</h2>
+                            </header>
+                            <hr/>
+                            <span class="image featured"><img src="images/pic08.jpg" alt=""/></span>
+
+                            {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.dropotron.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
