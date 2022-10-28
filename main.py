@@ -6,6 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, login_user, LoginManager, current_user, logout_user
 from flask_gravatar import Gravatar
 from forms import RegisterForm, LoginForm, AddCafeForm
+from datetime import datetime
 import os
 
 app = Flask(__name__)
@@ -87,7 +88,8 @@ class Cafe(db.Model):
 def home():
     cafes = db.session.query(Cafe).all()
     cafes_nr = len(cafes)
-    return render_template("index.html", all_cafes=cafes, cafes_nr=cafes_nr)
+    current_year = datetime.now().year
+    return render_template("index.html", all_cafes=cafes, cafes_nr=cafes_nr, current_year=current_year)
 
 
 @app.route("/register", methods=["GET", "POST"])
