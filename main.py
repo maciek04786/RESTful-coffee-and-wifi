@@ -10,7 +10,7 @@ from datetime import datetime
 import os
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
+app.config["SECRET_KEY"] = os.getenv("8BYkEfBA6O6donzWlSihBXox7C0sKR6b")
 Bootstrap(app)
 
 # CONNECT TO DB
@@ -82,9 +82,7 @@ class Cafe(db.Model):
 # db.create_all()
 
 
-# HTTP GET
-
-@app.route("/")
+@app.route("/", methods=["GET"])
 def home():
     cafes = db.session.query(Cafe).all()
     cafes_nr = len(cafes)
