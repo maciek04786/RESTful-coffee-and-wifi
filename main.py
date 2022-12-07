@@ -84,7 +84,7 @@ class Cafe(db.Model):
 #     db.create_all()
 
 
-@app.route("/", methods=["GET"])
+@app.route("/")
 def home():
     cafes = db.session.query(Cafe).all()
     cafes_nr = len(cafes)
